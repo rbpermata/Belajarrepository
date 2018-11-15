@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> Belajar Insert HTML </title>
+    </head>
+    <body>
+         <form id="form"> 
+            <p>Nama: 
+                <input type="text"> 
+            <p>Age: 
+                <input type="number"> 
+            <p>Sex:
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Pria"> Pria 
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Wanita"> Wanita 
+                
+        </form> 
+        <button id="klikini" onclick="fungsiKu2(this.value)"> klik </button> 
+        <p id="output"></p> 
+        
+        <!--
+        <script> 
+        function fungsiKu(x) 
+        { 
+            
+            document.getElementById("klikini").value = x
+            document.getElementById("tes").innerHTML = 'Name : '+ input1+'</br>'+' Age : '+input2+' tahun </br>'+ input3;
+        } 
+        </script>  -->
+        
+ 
+    <script> 
+    function fungsiKu1(x) 
+    { 
+        document.getElementById("klikini").value = x
+    } 
+    function fungsiKu2(y) 
+    { 
+        let input1 = document.getElementById("form").elements[0].value;  
+        let input2 = document.getElementById("form").elements[1].value;
+        document.getElementById("output").innerHTML = 'Name : '+ input1+'</br>'+' Age : '+input2+' tahun </br>'+ 'Sex : '+ y;
+    } 
+    </script>
+    </body>
+</html>

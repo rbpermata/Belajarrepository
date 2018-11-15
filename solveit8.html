@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> Belajar Insert HTML </title>
+    </head>
+    <body>
+         <form id="form"> 
+            <p>Ketik Kalimat: 
+            </br>
+                <input type="text"> 
+            <p>Karakter Yang di Cari: 
+                </br>
+                <input type="text"> 
+            <!-- <p>Sex:
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Pria"> Pria 
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Wanita"> Wanita  -->
+                
+        </form> 
+        <button id="klikini" onclick="fungsiKu2(this.value)"> Cari </button> 
+        <p id="output"></p> 
+ 
+    <script> 
+    function fungsiKu2(y) 
+    { 
+        let input1 = document.getElementById("form").elements[0].value;  
+        let input2 = document.getElementById("form").elements[1].value;
+        
+        let data = input1.split(input2);
+        let hasil1 = data.length-1;
+        
+        document.getElementById("output").innerHTML = 'Jumlah '+ input2 + ' Sebanyak '+ hasil1 +' Buah';
+    } 
+    </script>
+    </body>
+</html>

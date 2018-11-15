@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> Belajar Insert HTML </title>
+    </head>
+    <body>
+         <form id="form"> 
+            <p>Masukkan Angka 1: 
+                <input type="Number"> 
+            <p>Masukkan Angka 2: 
+                <input type="number"> 
+            <!-- <p>Sex:
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Pria"> Pria 
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Wanita"> Wanita  -->
+                
+        </form> 
+        <button id="klikini" onclick="fungsiKu2(this.value)"> Pangkatkan </button> 
+        <p id="output"></p> 
+ 
+    <script> 
+    function fungsiKu1(x) 
+    { 
+        document.getElementById("klikini").value = x
+    } 
+    function fungsiKu2(y) 
+    { 
+        let input1 = document.getElementById("form").elements[0].value;  
+        let input2 = document.getElementById("form").elements[1].value;
+        var hasil = Math.pow(input1, input2)
+        document.getElementById("output").innerHTML = 'Hasil '+ input1+'<sup>'+ input2 +'</sup> = '+ hasil;
+    } 
+    </script>
+    </body>
+</html>

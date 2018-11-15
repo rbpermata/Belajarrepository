@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title> Belajar Insert HTML </title>
+    </head>
+    <body>
+            <h1>kalkulator Sederhana</h1> 
+         <form id="form"> 
+            <p>Masukkan Angka 1 : 
+            </br>
+                <input type="number"> 
+            <p>Masukkan Angka 2 : 
+                </br>
+                <input type="number"> 
+            <!-- <p>Sex:
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Pria"> Pria 
+                <input type="radio" name="sex" onclick="fungsiKu1(this.value)" value="Wanita"> Wanita  -->
+                
+        </form> 
+        <button id="klikini" onclick="fungsiKali(this.value)"> Kali x </button> 
+        <button id="klikini" onclick="fungsiBagi(this.value)"> Bagi : </button> 
+        <button id="klikini" onclick="fungsiTambah(this.value)"> Tambah + </button> 
+        <button id="klikini" onclick="fungsiKurang(this.value)"> Kurang - </button> 
+        <button id="klikini" onclick="fungsiModulus(this.value)"> Modulus % </button> 
+        <button id="klikini" onclick="fungsiPangkat(this.value)"> Pangkat ^ </button> 
+        <p id="output"></p> 
+ 
+    <script> 
+        function fungsiKali(y) 
+        { 
+            let input1 = document.getElementById("form").elements[0].value;  
+            let input2 = document.getElementById("form").elements[1].value;
+            
+            var hasil = input1*input2;
+            document.getElementById("output").innerHTML = 'Jumlah : '+ hasil;
+        } 
+        function fungsiBagi(y)
+        {
+            let input1 = document.getElementById("form").elements[0].value;  
+            let input2 = document.getElementById("form").elements[1].value;
+        
+            var hasil = input1/input2;
+            document.getElementById("output").innerHTML = 'Jumlah : '+ hasil;
+        }
+        function fungsiTambah(y)
+        {
+            let input1 = parseInt(document.getElementById("form").elements[0].value);  
+            let input2 = parseInt(document.getElementById("form").elements[1].value);
+            
+            let hasil = input1+input2;
+            document.getElementById("output").innerHTML = 'Jumlah : '+ hasil;
+        }
+        function fungsiKurang(y)
+        {
+            let input1 = parseInt(document.getElementById("form").elements[0].value);  
+            let input2 = parseInt(document.getElementById("form").elements[1].value);
+        
+            let hasil = input1-input2;
+            document.getElementById("output").innerHTML = 'Jumlah : '+ hasil;
+        }
+        function fungsiModulus(y)
+        {
+            let input1 = parseInt(document.getElementById("form").elements[0].value);  
+            let input2 = parseInt(document.getElementById("form").elements[1].value);
+        
+            let hasil = input1%input2;
+            document.getElementById("output").innerHTML = 'Jumlah : '+ hasil;
+        }
+        function fungsiPangkat(y)
+        {
+            let input1 = parseInt(document.getElementById("form").elements[0].value);  
+            let input2 = parseInt(document.getElementById("form").elements[1].value);
+        
+            let hasil = input1^input2;
+            document.getElementById("output").innerHTML = 'Jumlah : '+ hasil;
+        }
+
+        
+
+    </script>
+    </body>
+</html>

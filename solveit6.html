@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Belajar Insert HTML </title>
+    </head>
+    <body>
+
+        <form id="form"> Masukkan Angka : 
+            <input type="number" value="" onkeyup="fungsiKu();">
+        </form> 
+        <button> Kuadratkan </button> 
+        <p id="tes"> Hasil </p> 
+ 
+    <script> 
+    function fungsiKu() 
+    { 
+        let input1 = document.getElementById("form").elements[0].value;
+        
+        var b = 2;
+        var a = Math.pow(input1, b)
+        document.getElementById("tes").innerHTML = 'Hasil '+input1+'<sup>'+ b+'  </sup>' +' = '+ a;  
+        
+        console.log(Math.cbrt(8));
+    } 
+    </script> 
+
+    </body>
+</html>
